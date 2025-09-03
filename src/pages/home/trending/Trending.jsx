@@ -13,13 +13,15 @@ const Trending = () => {
     setEndPoint(tab === "Day" ? "day" : "week");
   };
 
+  console.log(data);
+
   return (
     <div className="carouselSection">
       <ContentWrapper>
         <span className="carouselTitle">Trending</span>
         <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
       </ContentWrapper>
-      <Carousel data={data?.results} loading={loading} />
+      {/* <Carousel data={data?.results} loading={loading} /> */}
     </div>
   );
 };
